@@ -2,7 +2,6 @@ module.exports = function BrokerAutoClaim(mod) {
   let listings = [];
 
   mod.hook('C_TRADE_BROKER_BUY_IT_NOW', 2, event => {
-    console.log(event);
     listings.push(event.listing);
     setTimeout(function() {
       mod.send('C_TRADE_BROKER_BOUGHT_ITEM_LIST', 1, {})
