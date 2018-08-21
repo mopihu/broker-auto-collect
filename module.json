@@ -1,0 +1,8 @@
+{
+  "disableAutoUpdate": false,
+  "options": {
+    "niceName": "BrokerAutoClaim"
+  },
+  "servers": ["https://raw.githubusercontent.com/mopihu/broker-auto-claim/master/"],
+  "supportUrl": ""
+}
