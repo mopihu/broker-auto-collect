@@ -1,11 +1,12 @@
-module.exports = function BrokerAutoClaim(mod) {
+module.exports = function BrokerAutoCollect(mod) {
   let listings = [];
 
   mod.hook('C_TRADE_BROKER_BUY_IT_NOW', 2, event => {
     listings.push(event.listing);
-    setTimeout(function() {
-      mod.send('C_TRADE_BROKER_BOUGHT_ITEM_LIST', 1, {})
-    }, 1000);
+  })
+
+  mod.hook('C_TRADE_BROKER_DEAL_CONFIRM', 1, event => {
+    listings.push(event.listing);
   })
 
   mod.hook('S_TRADE_BROKER_BOUGHT_ITEM_LIST', 1, event => {
@@ -19,5 +20,14 @@ module.exports = function BrokerAutoClaim(mod) {
         listings.splice(item.purchase, 1);
       }
     })
+  })
+
+  mod.hook('S_SYSTEM_MESSAGE', 1, event => {
+    let msgObj = mod.parseSystemMessage(event.message);
+    if (msgObj.id == 'SMT_MEDIATE_SUCCESS_BUY') {
+      setTimeout(function() {
+        mod.send('C_TRADE_BROKER_BOUGHT_ITEM_LIST', 1, {})
+      }, 1000);
+    }
   })
 }

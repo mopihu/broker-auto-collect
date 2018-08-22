@@ -1,12 +1,14 @@
 {
 	"files": {
-		"index.js": "6c6b1fdfc6f7e36c3ce70ec23fa068923a7984a1ba513bd99518b8b3f6185ba0",
-		"module.json": "4d979dec6ee9eae08f5c3f96c15db83d7dfbb6c8a6e1f62be88558e4d2c679a3"
+		"index.js": "769a0739e885a8f0dea9793a63e279546330c07febd6d0c17a7682b2e5a8da3d",
+		"module.json": "533330fea72ecdce5443ce4b817ce575514b1bb10261f6bc3b9a3a19aff6e269"
 	},
 	"defs": {
 		"C_TRADE_BROKER_BOUGHT_ITEM_LIST": 1,
 		"C_TRADE_BROKER_BUY_IT_NOW": 2,
 		"C_TRADE_BROKER_CALC_BOUGHT_ITEM": 1,
+		"C_TRADE_BROKER_DEAL_CONFIRM": 1,
+		"S_SYSTEM_MESSAGE": 1,
 		"S_TRADE_BROKER_BOUGHT_ITEM_LIST": 1
 	}
 }

@@ -1,8 +1,8 @@
 {
   "disableAutoUpdate": false,
   "options": {
-    "niceName": "BrokerAutoClaim"
+    "niceName": "BrokerAutoCollect"
   },
-  "servers": ["https://raw.githubusercontent.com/mopihu/broker-auto-claim/master/"],
+  "servers": ["https://raw.githubusercontent.com/mopihu/broker-auto-collect/master/"],
   "supportUrl": ""
 }
